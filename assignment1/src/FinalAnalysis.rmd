@@ -1,0 +1,15 @@
+Title
+========================================================
+
+Based on exploration analysis, it looks like loan length and amount requested play a role in determining the interest rates. Let us see how these factors impact interest rates along with fico scores.
+
+```{r}
+summary(loansData)
+```
+
+You can also embed plots, for example:
+
+```{r fig.width=7, fig.height=6}
+plot(cars)
+```
+

@@ -1,0 +1,64 @@
+Title
+========================================================
+
+Based on exploration analysis, it looks like loan length and amount requested play a role in determining the interest rates. Let us see how these factors impact interest rates along with fico scores.
+
+
+```r
+summary(loansData)
+```
+
+```
+##       Amount.Requested Amount.Funded.By.Investors Interest.Rate  
+##  [ 8475,10050):324     Min.   :    0              Min.   : 5.42  
+##  [13075,17200):320     1st Qu.: 6000              1st Qu.:10.16  
+##  [ 4550, 6075):304     Median :10000              Median :13.11  
+##  [ 1000, 4550):301     Mean   :12080              Mean   :13.08  
+##  [17200,22250):300     3rd Qu.:16200              3rd Qu.:15.80  
+##  [22250,35000]:299     Max.   :35000              Max.   :24.89  
+##  (Other)      :573                                               
+##     Loan.Length               Loan.Purpose  Debt.To.Income.Ratio
+##  36 months:1884   debt_consolidation:1267   Min.   : 0.00       
+##  60 months: 537   credit_card       : 431   1st Qu.: 9.76       
+##                   other             : 189   Median :15.33       
+##                   home_improvement  : 147   Mean   :15.39       
+##                   major_purchase    : 100   3rd Qu.:20.67       
+##                   small_business    :  84   Max.   :34.91       
+##                   (Other)           : 203                       
+##      State       Home.Ownership Monthly.Income     FICO.Range  
+##  CA     : 418   MORTGAGE:1113   Min.   :   588   670-674: 168  
+##  NY     : 243   NONE    :   0   1st Qu.:  3500   675-679: 161  
+##  TX     : 171   OTHER   :   5   Median :  5000   680-684: 157  
+##  FL     : 161   OWN     : 189   Mean   :  5736   695-699: 146  
+##  IL     : 100   RENT    :1114   3rd Qu.:  6833   665-669: 138  
+##  GA     :  97                   Max.   :102750   690-694: 136  
+##  (Other):1231                                    (Other):1515  
+##  Open.CREDIT.Lines   Revolving.CREDIT.Balance
+##  Min.   : 2.0      [27872,270800]:309        
+##  1st Qu.: 7.0      [10976, 14189):305        
+##  Median : 9.0      [ 5591,  8076):303        
+##  Mean   :10.1      [14189, 18906):303        
+##  3rd Qu.:13.0      [18906, 27872):303        
+##  Max.   :38.0      [ 2927,  5591):302        
+##                    (Other)       :596        
+##  Inquiries.in.the.Last.6.Months Employment.Length
+##  Min.   :0.000                  10+ years:653    
+##  1st Qu.:0.000                  < 1 year :248    
+##  Median :0.000                  2 years  :244    
+##  Mean   :0.906                  3 years  :235    
+##  3rd Qu.:1.000                  5 years  :202    
+##  Max.   :9.000                  4 years  :192    
+##                                 (Other)  :647
+```
+
+
+You can also embed plots, for example:
+
+
+```r
+plot(cars)
+```
+
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
+
+
